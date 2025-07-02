@@ -1,23 +1,19 @@
 'use client';
 
+import { motion, MotionConfig } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 
 export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [isSearchExpanded, setIsSearchExpanded] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Searching for:", searchQuery);
   };
 
-  const toggleSearch = () => {
-    setIsSearchExpanded(!isSearchExpanded);
-    if (isSearchExpanded) {
-      setSearchQuery("");
-    }
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
     <header className="sticky top-0 z-50 bg-white text-gray-800 border-b border-gray-300 shadow-sm font-serif">
@@ -37,13 +33,12 @@ export default function Navbar() {
               <Link href="/products" className="hover:text-[#857a51] transition-colors">Products</Link>
               <Link href="/about" className="hover:text-[#857a51] transition-colors">About</Link>
               <Link href="/contact" className="hover:text-[#857a51] transition-colors">Contact</Link>
-              
             </div>
           </div>
 
           {/* Search Bar (classic style) */}
-          <div className="flex justify-center lg:justify-end lg:w-1/3 pr-6">
-            <form onSubmit={handleSearch} className="relative w-64">
+          <div className="flex justify-center lg:justify-end lg:w-1/3 pr-6 pt-0">
+            <form onSubmit={handleSearch} className="relative -m-7 w-full lg:w-64 md:-m-0">
               <input
                 type="text"
                 placeholder="Search..."
@@ -53,7 +48,7 @@ export default function Navbar() {
               />
               <button
                 type="submit"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-[#5a5938]"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-600 hover:text-[#5a5938] -mt-2 md:-mt-0"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -64,7 +59,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden absolute top-5 right-5">
-            <button className="text-gray-700 hover:text-[#857a51] transition-colors">
+            <button className="text-gray-700 hover:text-[#857a51] transition-colors" onClick={toggleMenu}>
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
@@ -73,13 +68,53 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Navigation Links */}
-        <div className="md:hidden mt-6 pt-4 border-t border-gray-200 font-serif text-base tracking-wide">
-          <div className="flex flex-col space-y-4">
-            <Link href="/" className="hover:text-[#857a51] transition-colors">Home</Link>
-            <Link href="/products" className="hover:text-[#857a51] transition-colors">Products</Link>
-            <Link href="/contact" className="hover:text-[#857a51] transition-colors">Contact</Link>
-          </div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ 
+            opacity: isMenuOpen ? 1 : 0, 
+            height: isMenuOpen ? "auto" : 0 
+          }}
+          transition={{ 
+            duration: 0.3, 
+            ease: "easeInOut" 
+          }}
+          className="overflow-hidden"
+        >
+          <motion.div 
+            className="flex flex-col space-y-4 pt-4"
+            initial={{ y: -20 }}
+            animate={{ y: isMenuOpen ? 0 : -20 }}
+            transition={{ 
+              duration: 0.3, 
+              ease: "easeInOut",
+              delay: isMenuOpen ? 0.1 : 0 
+            }}
+          >
+            {["Home", "Products", "About", "Contact"].map((label, index) => (
+              <motion.div
+                key={label}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ 
+                  opacity: isMenuOpen ? 1 : 0, 
+                  x: isMenuOpen ? 0 : -20 
+                }}
+                transition={{ 
+                  duration: 0.3, 
+                  ease: "easeInOut",
+                  delay: isMenuOpen ? 0.1 + index * 0.1 : 0 
+                }}
+              >
+                <Link
+                  href={`/${label === "Home" ? "" : label.toLowerCase()}`}
+                  className="hover:text-[#857a51] transition-colors block"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {label}
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
+        </motion.div>
       </nav>
     </header>
   );

@@ -2,9 +2,10 @@
 
 import { Review } from "@/data/reviews";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/autoplay";
 
 interface ReviewSliderProps {
   reviews: Review[];
@@ -14,7 +15,7 @@ export default function ReviewSlider({ reviews }: ReviewSliderProps) {
   return (
     <section className="bg-[#2e463f] text-white py-24 font-serif">
       <div className="max-w-3xl mx-auto text-center relative px-4">
-        <div className="w-full relative">
+        <div className="w-10/12 mx-auto lg:w-full relative">
           {/* Custom Prev Button */}
           <button
             className="swiper-button-prev-custom absolute -left-10 top-1/2 -translate-y-1/2 z-10 bg-transparent border border-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-white/10 transition"
@@ -58,7 +59,7 @@ export default function ReviewSlider({ reviews }: ReviewSliderProps) {
           </button>
 
           <Swiper
-            modules={[Navigation]}
+            modules={[Navigation, Autoplay]}
             navigation={{
               prevEl: ".swiper-button-prev-custom",
               nextEl: ".swiper-button-next-custom",
@@ -67,10 +68,14 @@ export default function ReviewSlider({ reviews }: ReviewSliderProps) {
             slidesPerView={1}
             className="pb-12"
             loop={true}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
           >
             {reviews.map((review, index) => (
               <SwiperSlide key={index}>
-                <div className="text-center max-w-2xl mx-auto">
+                <div className="text-center w-11/12 mx-auto lg:w-full max-w-2xl">
                   <div className="mb-6 text-yellow-400 text-2xl">★★★★★</div>
                   <h3 className="text-2xl italic mb-4">"{review.quote}"</h3>
                   <p className="text-lg text-white/90 mb-6">{review.body}</p>

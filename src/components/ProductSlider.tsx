@@ -28,10 +28,10 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (
-    <div className="w-full relative">
+    <div className="w-10/12 mx-auto lg:w-full relative">
       {/* Custom Prev Button */}
       <button
-        className="swiper-button-prev-custom absolute -left-7 top-1/2 -translate-y-1/2 z-10 bg-white border border-gray-300 shadow-md w-14 h-14 rounded-full flex items-center justify-center hover:bg-gray-100 transition"
+        className="swiper-button-prev-custom absolute -left-9 top-1/2 -translate-y-1/2 z-10 bg-white border border-gray-300 shadow-md w-14 h-14 rounded-full flex items-center justify-center hover:bg-gray-100 transition"
         aria-label="Previous"
       >
         <svg
@@ -52,7 +52,7 @@ const ProductCarousel: React.FC<ProductCarouselProps> = ({ products }) => {
 
       {/* Custom Next Button */}
       <button
-        className="swiper-button-next-custom absolute -right-7 top-1/2 -translate-y-1/2 z-10 bg-white border border-gray-300 shadow-md w-14 h-14 rounded-full flex items-center justify-center hover:bg-gray-100 transition"
+        className="swiper-button-next-custom absolute -right-9 top-1/2 -translate-y-1/2 z-10 bg-white border border-gray-300 shadow-md w-14 h-14 rounded-full flex items-center justify-center hover:bg-gray-100 transition"
         aria-label="Next"
       >
         <svg
