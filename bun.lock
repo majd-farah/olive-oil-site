@@ -11,7 +11,7 @@
         "next": "15.3.4",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
-        "swiper": "^11.2.9",
+        "swiper": "^11.2.10",
       },
       "devDependencies": {
         "@tailwindcss/postcss": "^4",
@@ -373,7 +373,7 @@
 
     "supports-preserve-symlinks-flag": ["supports-preserve-symlinks-flag@1.0.0", "", {}, "sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w=="],
 
-    "swiper": ["swiper@11.2.9", "", {}, "sha512-X4lP396wfb85t5GclSlXmZyeDgcV66JK9+HDfqlk+8wJ5Bp85ZMv2fxu9psulsm22dLQxbnN4kADxK8jXTnSuw=="],
+    "swiper": ["swiper@11.2.10", "", {}, "sha512-RMeVUUjTQH+6N3ckimK93oxz6Sn5la4aDlgPzB+rBrG/smPdCTicXyhxa+woIpopz+jewEloiEE3lKo1h9w2YQ=="],
 
     "tailwindcss": ["tailwindcss@4.1.11", "", {}, "sha512-2E9TBm6MDD/xKYe+dvJZAmg3yxIEDNRc0jwlNyDg/4Fil2QcSLjFKGVff0lAf1jjeaArlG/M75Ey/EYr/OJtBA=="],
 
