@@ -21,12 +21,12 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-white text-gray-800 border-b border-gray-300 shadow-sm font-serif">
-      <nav className="container mx-auto px-4 py-6">
+      <nav className="max-w-7xl mx-auto px-4 py-2">
         <div className="flex flex-col lg:flex-row lg:items-center space-y-6 lg:space-y-0">
           {/* Logo */}
           <div className="flex justify-center lg:justify-start lg:w-1/3">
             <Link href="/" className="text-3xl font-bold tracking-wide text-[#5a5938]">
-              Joud
+              <img src="/logo.png" alt="Joud Olive Oil Logo" className="h-17 w-auto" />
             </Link>
           </div>
 
@@ -42,7 +42,7 @@ export default function Navbar() {
           </div>
 
           {/* Search Bar (classic style) */}
-          <div className="flex justify-center lg:justify-end lg:w-1/3">
+          <div className="flex justify-center lg:justify-end lg:w-1/3 pr-6">
             <form onSubmit={handleSearch} className="relative w-64">
               <input
                 type="text"
