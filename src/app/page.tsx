@@ -108,7 +108,7 @@ export default function HomePage() {
               the olives, and pungent because of the abundance of nutrients.
             </p>
             <a
-              href="/learn"
+              href="/about"
               className="inline-block bg-gray-900 text-white px-6 py-3 tracking-wide uppercase text-sm font-medium hover:bg-gray-700 transition self-start"
             >
               Learn More
@@ -126,7 +126,7 @@ export default function HomePage() {
               sellers every year.
             </p>
             <a
-              href="/awards"
+              href="/about"
               className="inline-block bg-gray-900 text-white px-6 py-3 tracking-wide uppercase text-sm font-medium hover:bg-gray-700 transition self-start"
             >
               Learn More
