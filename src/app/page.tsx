@@ -61,7 +61,7 @@ export default function HomePage() {
               </p>
               <a
                 href="/products"
-                className="hidden lg:inline-block bg-gray-900 text-white px-12 py-3 text-lg font-semibold tracking-widest hover:bg-gray-700 transition"
+                className="hidden lg:inline-block bg-gray-900 text-white px-12 py-3 text-lg font-semibold tracking-widest hover:bg-gray-700 transition font-serif"
               >
                 SHOP ALL
               </a>
@@ -76,8 +76,8 @@ export default function HomePage() {
           {/* Mobile Shop All */}
           <div className="mt-12 lg:hidden flex justify-center">
             <a
-              href="/collections/all"
-              className="bg-gray-900 text-white px-12 py-3 text-lg font-semibold tracking-widest hover:bg-gray-700 transition"
+              href="/products"
+              className="bg-gray-900 text-white px-12 py-3 text-lg tracking-widest hover:bg-gray-700 transition font-serif"
             >
               SHOP ALL
             </a>

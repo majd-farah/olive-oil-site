@@ -103,6 +103,7 @@ export default function Navbar() {
                   ease: "easeInOut",
                   delay: isMenuOpen ? 0.1 + index * 0.1 : 0 
                 }}
+                className={label === "Contact" ? "pb-3" : ""}
               >
                 <Link
                   href={`/${label === "Home" ? "" : label.toLowerCase()}`}
