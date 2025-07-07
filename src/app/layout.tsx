@@ -1,5 +1,4 @@
 import "./globals.css";
-import Link from "next/link";
 import Navbar from "../components/Navbar";
 import { ReactNode } from "react";
 import Footer from "@/components/Footer";
@@ -15,7 +14,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body className="bg-gray-50 text-gray-800 font-sans min-h-screen">
         <Navbar />
-        <main>{children}</main>
+        <main>
+          {children}
+          <Analytics />
+        </main>
         <Footer />
       </body>
     </html>
