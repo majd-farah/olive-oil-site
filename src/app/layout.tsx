@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "../components/Navbar";
 import { ReactNode } from "react";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
   title: "Joud Olive Oil",
