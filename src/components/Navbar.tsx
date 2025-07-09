@@ -85,42 +85,63 @@ export default function Navbar() {
 
               {/* Search Results Dropdown */}
               {showSearchResults && searchQuery.length > 0 && (
-                <div className="absolute top-full left-0 right-0 bg-white border border-gray-400 shadow-lg max-h-96 overflow-y-auto z-50">
+                <motion.div 
+                  className="absolute top-full left-0 right-0 bg-white border border-gray-400 shadow-lg max-h-96 overflow-y-auto z-50"
+                  initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
+                >
                   {filteredProducts.length > 0 ? (
-                    filteredProducts.map((product) => (
-                      <Link
+                    filteredProducts.map((product, index) => (
+                      <motion.div
                         key={product.slug}
-                        href={product.href}
-                        className="flex items-center p-3 hover:bg-gray-50 border-b border-gray-100 last:border-b-0 transition-colors"
-                        onClick={() => {
-                          setShowSearchResults(false);
-                          setSearchQuery("");
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ 
+                          duration: 0.2, 
+                          delay: index * 0.05,
+                          ease: "easeOut"
                         }}
                       >
-                        <img
-                          src={product.image}
-                          alt={product.name}
-                          className="w-12 h-12 object-cover rounded mr-3"
-                        />
-                        <div className="flex-1 min-w-0">
-                          <div className="text-sm font-medium text-gray-900 truncate">
-                            {product.name}
+                        <Link
+                          href={product.href}
+                          className="flex items-center p-3 hover:bg-gray-50 border-b border-gray-100 last:border-b-0 transition-colors"
+                          onClick={() => {
+                            setShowSearchResults(false);
+                            setSearchQuery("");
+                          }}
+                        >
+                          <img
+                            src={product.image}
+                            alt={product.name}
+                            className="w-12 h-12 object-cover rounded mr-3"
+                          />
+                          <div className="flex-1 min-w-0">
+                            <div className="text-sm font-medium text-gray-900 truncate">
+                              {product.name}
+                            </div>
+                            <div className="text-xs text-gray-500 truncate">
+                              {product.subtitle}
+                            </div>
+                            <div className="text-sm font-semibold text-[#5a5938]">
+                              {product.price}
+                            </div>
                           </div>
-                          <div className="text-xs text-gray-500 truncate">
-                            {product.subtitle}
-                          </div>
-                          <div className="text-sm font-semibold text-[#5a5938]">
-                            {product.price}
-                          </div>
-                        </div>
-                      </Link>
+                        </Link>
+                      </motion.div>
                     ))
                   ) : (
-                    <div className="p-3 text-sm text-gray-500 text-center">
+                    <motion.div 
+                      className="p-3 text-sm text-gray-500 text-center"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.2 }}
+                    >
                       No products found
-                    </div>
+                    </motion.div>
                   )}
-                </div>
+                </motion.div>
               )}
             </div>
           </div>
