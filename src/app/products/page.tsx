@@ -10,7 +10,6 @@ const sortOptions = [
   { label: 'Name (Z–A)', value: 'name-desc' },
   { label: 'Price (Low–High)', value: 'price-asc' },
   { label: 'Price (High–Low)', value: 'price-desc' },
-  { label: 'Rating (High–Low)', value: 'rating-desc' },
 ];
 
 function sortProducts(products: Product[], sortBy: string): Product[] {
@@ -24,8 +23,6 @@ function sortProducts(products: Product[], sortBy: string): Product[] {
         return parseFloat(a.price.slice(1)) - parseFloat(b.price.slice(1));
       case 'price-desc':
         return parseFloat(b.price.slice(1)) - parseFloat(a.price.slice(1));
-      case 'rating-desc':
-        return b.rating - a.rating;
       default:
         return 0;
     }
