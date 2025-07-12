@@ -12,20 +12,8 @@ interface ProductCardProps {
   region: string;
   subtitle: string;
   price: string;
-  reviews: number;
-  rating: number;
   tag?: ProductTag | null;
   href: string;
-}
-
-function StarRating({ rating }: { rating: number }) {
-  return (
-    <span className="text-black">
-      {Array.from({ length: rating }).map((_, i) => (
-        <span key={i}>★</span>
-      ))}
-    </span>
-  );
 }
 
 export default function ProductCard({
@@ -34,8 +22,6 @@ export default function ProductCard({
   region,
   subtitle,
   price,
-  reviews,
-  rating,
   tag,
   href
 }: ProductCardProps) {
@@ -46,7 +32,10 @@ export default function ProductCard({
     >
       {/* Product Image */}
       <span className="h-56 flex items-center justify-center bg-white">
-        <img src={image} alt={name} className="max-h-48 object-contain" />
+        {image
+          ? <img src={image} alt={name} className="max-h-48 object-contain" />
+          : <span className="text-gray-400 text-lg">No image</span>
+        }
       </span>
 
       {/* Product Info */}
@@ -58,8 +47,6 @@ export default function ProductCard({
         </span>
         <div className="flex items-center gap-2 text-sm text-gray-700 mt-auto">
           <span className="font-bold text-lg text-gray-900">{price}</span>
-          <StarRating rating={rating} />
-          <span className="ml-1">{reviews} Reviews</span>
         </div>
       </span>
     </a>

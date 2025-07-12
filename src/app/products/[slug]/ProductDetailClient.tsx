@@ -37,16 +37,32 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
           <p className="text-gray-500 italic mb-2">{product.subtitle}</p>
           <p className="text-lg text-gray-600 mb-4">{product.region}</p>
           <p className="text-2xl font-bold mb-6">{product.price}</p>
-          <motion.a
-            href={product.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-[#b3a16c] text-black px-6 py-2 hover:bg-[#d8c48c] transition"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Buy on Amazon
-          </motion.a>
+          <span className="flex gap-4 mb-4">
+            {product.link && (
+              <motion.a
+                href={product.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#b3a16c] text-black px-6 py-2 hover:bg-[#d8c48c] transition"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Buy on Amazon
+              </motion.a>
+            )}
+            {product.walmart && (
+              <motion.a
+                href={product.walmart}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#0071ce] text-white px-6 py-2 hover:bg-[#339af0] transition"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Buy on Walmart
+              </motion.a>
+            )}
+          </span>
           <p className="mt-6 text-base leading-relaxed">{product.description}</p>
         </motion.div>
       </motion.div>

@@ -112,11 +112,16 @@ export default function Navbar() {
                             setSearchQuery("");
                           }}
                         >
-                          <img
-                            src={product.image}
-                            alt={product.name}
-                            className="w-12 h-12 object-cover rounded mr-3"
-                          />
+                          {product.image
+                            ? <span className="w-12 h-12 flex items-center justify-center bg-white rounded mr-3 border border-gray-200 overflow-hidden">
+                                <img
+                                  src={product.image}
+                                  alt={product.name}
+                                  className="max-w-full max-h-full object-contain"
+                                />
+                              </span>
+                            : <span className="w-12 h-12 flex items-center justify-center bg-gray-100 text-gray-400 rounded mr-3 border border-gray-200 text-xs">No image</span>
+                          }
                           <div className="flex-1 min-w-0">
                             <div className="text-sm font-medium text-gray-900 truncate">
                               {product.name}

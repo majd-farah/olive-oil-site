@@ -12,6 +12,16 @@ const fadeInUp = {
   viewport: { once: true, margin: "-100px" },
 };
 
+// Select featured products by slug
+const featuredSlugs = [
+  "joud-extra-virgin-olive-oil-750ml",
+  "joud-extra-virgin-olive-oil-2.85l",
+  "joud-green-olives-2.2lbs",
+  "joud-black-olives-2.2lbs",
+  "joud-pickled-cucumbers-2.2lb"
+]
+const featuredProducts = products.filter(p => featuredSlugs.includes(p.slug))
+
 export default function HomePage() {
   return (
     <>
@@ -69,7 +79,7 @@ export default function HomePage() {
 
             {/* Product Slider */}
             <div className="lg:w-2/3 w-full relative">
-              <ProductSlider products={products} />
+              <ProductSlider products={featuredProducts} />
             </div>
           </div>
 

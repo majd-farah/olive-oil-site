@@ -15,8 +15,6 @@ interface Product {
   name: string;
   subtitle: string;
   price: string;
-  reviews: number;
-  rating: number;
   href: string;
 }
 
