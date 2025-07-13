@@ -59,14 +59,14 @@ export default function HomePage() {
         </motion.section>
 
         {/* Featured Products */}
-        <motion.section className="py-24 px-4 bg-white" {...fadeInUp}>
-          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-center justify-center px-0">
+        <motion.section className="pt-24 px-4 bg-white" {...fadeInUp}>
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-center justify-center px-0 md:px-12 xl:px-0">
             {/* Left Panel */}
             <div className="lg:w-[340px] w-full mb-8 lg:mb-0 flex flex-col items-center lg:items-start">
-              <h2 className="font-serif text-5xl font-semibold text-gray-900 mb-2">
+              <h2 className="font-serif text-5xl font-semibold text-gray-900 mb-2 text-center lg:text-left">
                 Featured Products
               </h2>
-              <p className="italic text-lg text-gray-500 mb-8">
+              <p className="italic text-lg text-gray-500 mb-8 text-center">
                 from the Middle East
               </p>
               <a
@@ -118,7 +118,7 @@ export default function HomePage() {
               the olives, and pungent because of the abundance of nutrients.
             </p>
             <a
-              href="/about"
+              href="/about-olive-oil"
               className="inline-block bg-gray-900 text-white px-6 py-3 tracking-wide uppercase text-sm font-medium hover:bg-gray-700 transition self-start"
             >
               Learn More

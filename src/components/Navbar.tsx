@@ -129,9 +129,6 @@ export default function Navbar() {
                             <div className="text-xs text-gray-500 truncate">
                               {product.subtitle}
                             </div>
-                            <div className="text-sm font-semibold text-[#5a5938]">
-                              {product.price}
-                            </div>
                           </div>
                         </Link>
                       </motion.div>

@@ -35,8 +35,7 @@ export default function ProductDetailClient({ product }: ProductDetailClientProp
         >
           <h1 className="text-4xl font-semibold mb-4">{product.name}</h1>
           <p className="text-gray-500 italic mb-2">{product.subtitle}</p>
-          <p className="text-lg text-gray-600 mb-4">{product.region}</p>
-          <p className="text-2xl font-bold mb-6">{product.price}</p>
+          <p className="text-lg text-gray-600 mb-6">{product.region}</p>
           <span className="flex gap-4 mb-4">
             {product.link && (
               <motion.a

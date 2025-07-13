@@ -8,7 +8,6 @@ export interface Product {
   image: string;
   region: string;
   subtitle: string;
-  price: string;
   href: string;
   link: string;
   walmart: string;
@@ -23,7 +22,6 @@ export const products: Product[] = [
     image: "/products/joud-extra-virgin-olive-oil-750ml.png",
     region: "Zgharta, Lebanon",
     subtitle: "Premium - Filtered - Cold Pressed",
-    price: "$21.95",
     href: "/products/joud-extra-virgin-olive-oil-750ml",
     link: "https://a.co/d/d8NwmcW",
     walmart: "https://www.walmart.com/ip/Joud-Premium-Extra-Virgin-Olive-Oil-Single-Origin-2022-Harvest-750-ML/5203446778",
@@ -33,10 +31,9 @@ export const products: Product[] = [
   {
     slug: "joud-extra-virgin-olive-oil-2.85l",
     name: "Joud Extra Virgin Olive Oil, 2.85L",
-    image: "/products/joud-extra-virgin-olive-oil-2_85l.png", // update with actual hosted image path
+    image: "/products/joud-extra-virgin-olive-oil-2_85l.png",
     region: "Zgharta, Lebanon",
     subtitle: "Premium - Filtered - Cold Pressed",
-    price: "$59.95",
     href: "/products/joud-extra-virgin-olive-oil-2.85l",
     link: "https://a.co/d/iuq2aJd",
     walmart: "https://www.walmart.com/ip/Joud-Premium-Extra-Virgin-Olive-Oil-Single-Origin-2-85L/5230836804",
@@ -49,7 +46,6 @@ export const products: Product[] = [
     image: "/products/Green Olives 2.2 lb.png",
     region: "Zgharta, Lebanon",
     subtitle: "Premium - Whole - Unpitted",
-    price: "unknown",
     href: "/products/joud-green-olives-2.2lbs",
     link: "",
     walmart: "",
@@ -59,10 +55,9 @@ export const products: Product[] = [
   {
     slug: "joud-green-olives-6.6lbs",
     name: "Joud Green Olives, 6.6lbs",
-    image: "",
+    image: "/products/Green Olives 6.6 lb.png",
     region: "Zgharta, Lebanon",
     subtitle: "Premium - Whole - Unpitted",
-    price: "unknown",
     href: "/products/joud-green-olives-6.6lbs",
     link: "https://a.co/d/eorfmqK",
     walmart: "",
@@ -75,7 +70,6 @@ export const products: Product[] = [
     image: "/products/Black Olives 2.2 lb.png",
     region: "Zgharta, Lebanon",
     subtitle: "Premium - Whole - Unpitted",
-    price: "unknown",
     href: "/products/joud-black-olives-2.2lbs",
     link: "",
     walmart: "",
@@ -85,10 +79,9 @@ export const products: Product[] = [
   {
     slug: "joud-black-olives-6.6lbs",
     name: "Joud Black Olives, 6.6lbs",
-    image: "",
+    image: "/products/Black Olives 6.6 lb.png",
     region: "Zgharta, Lebanon",
     subtitle: "Premium - Whole - Unpitted",
-    price: "unknown",
     href: "/products/joud-black-olives-6.6lbs",
     link: "",
     walmart: "",
@@ -101,7 +94,6 @@ export const products: Product[] = [
     image: "/products/Pickled Cucumbers 2.2 lb.png",
     region: "Bekaa Valley, Lebanon",
     subtitle: "Premium - Whole",
-    price: "unknown",
     href: "/products/joud-pickled-cucumbers-2.2lb",
     link: "",
     walmart: "",
@@ -111,10 +103,9 @@ export const products: Product[] = [
   {
     slug: "joud-pickled-cucumbers-6.6lb",
     name: "Joud Pickled Cucumbers, 6.6 lb",
-    image: "",
+    image: "/products/Pickled Cucumbers 6.6 lb.png",
     region: "Bekaa Valley, Lebanon",
     subtitle: "Premium - Whole",
-    price: "unknown",
     href: "/products/joud-pickled-cucumbers-6.6lb",
     link: "",
     walmart: "",
@@ -127,7 +118,6 @@ export const products: Product[] = [
     image: "/products/Pickled Wild Cucumbers 2.2 lb.png",
     region: "Bekaa Valley, Lebanon",
     subtitle: "Premium - Whole",
-    price: "unknown",
     href: "/products/joud-pickled-wild-cucumbers-2.2lb",
     link: "",
     walmart: "",
@@ -137,10 +127,9 @@ export const products: Product[] = [
   {
     slug: "joud-pickled-wild-cucumbers-6.6lb",
     name: "Joud Pickled Wild Cucumbers, 6.6 lb",
-    image: "",
+    image: "/products/Pickled Wild Cucumbers 6.6 lb.png",
     region: "Bekaa Valley, Lebanon",
     subtitle: "Premium - Whole",
-    price: "unknown",
     href: "/products/joud-pickled-wild-cucumbers-6.6lb",
     link: "",
     walmart: "",
@@ -153,7 +142,6 @@ export const products: Product[] = [
     image: "/products/Mixed Vegetables 1.32 lb.png",
     region: "Bekaa Valley, Lebanon",
     subtitle: "Premium - Full of Flavor",
-    price: "unknown",
     href: "/products/joud-pickled-mixed-vegetables-1.32lb",
     link: "",
     walmart: "",
@@ -166,7 +154,6 @@ export const products: Product[] = [
     image: "/products/Mixed Vegetables 2.2 lb.png",
     region: "Bekaa Valley, Lebanon",
     subtitle: "Premium - Full of Flavor",
-    price: "unknown",
     href: "/products/joud-pickled-mixed-vegetables-2.2lb",
     link: "",
     walmart: "",
@@ -179,7 +166,6 @@ export const products: Product[] = [
     image: "/products/Pickled Eggplants 1.32 lb.png",
     region: "Bekaa Valley, Lebanon",
     subtitle: "Premium - Stuffed - Rich and Nutty Flavor",
-    price: "unknown",
     href: "/products/joud-pickled-eggplants-1.32lb",
     link: "",
     walmart: "",
@@ -192,7 +178,6 @@ export const products: Product[] = [
     image: "/products/Pickled Eggplants 2.2 lb.png",
     region: "Bekaa Valley, Lebanon",
     subtitle: "Premium - Stuffed - Rich and Nutty Flavor",
-    price: "unknown",
     href: "/products/joud-pickled-eggplants-2.2lb",
     link: "",
     walmart: "",

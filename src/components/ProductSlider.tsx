@@ -7,16 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import ProductCard from "./ProductCard";
 import type { Swiper as SwiperType } from "swiper";
-
-interface Product {
-  tag: { label: string } | null;
-  image: string;
-  region: string;
-  name: string;
-  subtitle: string;
-  price: string;
-  href: string;
-}
+import type { Product } from "@/data/products";
 
 interface ProductCarouselProps {
   products: Product[];
