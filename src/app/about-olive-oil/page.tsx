@@ -55,7 +55,7 @@ export default function AboutOliveOilPage() {
         ].map((section, i) => (
           <motion.section
             key={i}
-            className="mb-10 bg-white p-6 border border-gray-200 rounded-lg shadow-md"
+            className="mb-10"
             {...fadeInUp}
           >
             <h2 className="text-2xl font-semibold mb-3">{section.title}</h2>
@@ -91,7 +91,7 @@ export default function AboutOliveOilPage() {
           <h3 className="text-2xl font-semibold mb-4">Ready to try authentic olive oil?</h3>
           <Link
             href="/products"
-            className="inline-block bg-[#b3a16c] text-black font-medium px-6 py-3 rounded-md hover:bg-[#cdb47c] transition"
+            className="inline-block bg-[#b3a16c] text-black font-medium px-6 py-3 hover:bg-[#cdb47c] transition"
           >
             Browse Our Products
           </Link>

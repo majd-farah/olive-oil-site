@@ -102,7 +102,7 @@ export default function HomePage() {
           <div className="min-h-[320px] h-full w-full">
             <img
               src="/olives.jpg"
-              alt="Harvesting olives"
+              alt="Olives in a pile"
               className="h-full w-full object-cover"
             />
           </div>
@@ -127,16 +127,13 @@ export default function HomePage() {
           {/* Text Bottom Left */}
           <div className="flex flex-col justify-center items-start h-full w-full bg-white p-12 order-2 md:order-3">
             <h2 className="text-4xl font-semibold mb-4">
-              Award Winning Olive Oils
+              The Art of Arab Pickles
             </h2>
             <p className="text-lg leading-relaxed mb-6 text-gray-700">
-              Our producers truly are the best in the world, and each year their
-              products compete in the most prestigious competitions. Customers
-              make the best judges—and they make these top-quality oils best
-              sellers every year.
+              Pickles are a beloved staple across the Arab world, adding color, crunch, and tang to every meal. From wild cucumbers to stuffed eggplants, each region and family has its own pickling traditions. Discover how these vibrant pickled vegetables bring flavor and heritage to the table.
             </p>
             <a
-              href="/about"
+              href="/about-pickled-goods"
               className="inline-block bg-gray-900 text-white px-6 py-3 tracking-wide uppercase text-sm font-medium hover:bg-gray-700 transition self-start"
             >
               Learn More
@@ -145,8 +142,8 @@ export default function HomePage() {
           {/* Image Bottom Right */}
           <div className="min-h-[320px] h-full w-full order-3 md:order-4">
             <img
-              src="/olivetree.jpg"
-              alt="Award winning olive oil bottle"
+              src="/pickles.jpg"
+              alt="Assortment of pickles"
               className="h-full w-full object-cover"
             />
           </div>
@@ -163,13 +160,13 @@ export default function HomePage() {
           <div className="absolute inset-0 z-10 bg-black/40 backdrop-blur-sm" />
           <div className="relative z-20 text-center px-6 py-40 max-w-4xl mx-auto">
             <p className="uppercase text-sm tracking-widest text-[#b3a16c] mb-2">
-              Our Story
+              Our Philosophy
             </p>
             <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-              We Are The Bridge
+              From Tradition to Table
             </h2>
             <p className="italic text-xl mb-8 text-yellow-100">
-              between you and the world's best olive oil producers
+              We bring you time-honored goods crafted with care—from olive oils and pickles to rare pantry staples.
             </p>
             <a
               href="/about"

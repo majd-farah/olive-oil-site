@@ -12,7 +12,7 @@ export interface Review {
     },
     {
       quote: "Authentic and flavorful!",
-      body: "These oils taste just like what I had in the Mediterranean. I use them daily in my cooking.",
+      body: "These Pickles taste just like what I had in the Mediterranean. I use them daily in my cooking.",
       author: "George T.",
     },
     {
