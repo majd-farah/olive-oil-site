@@ -34,7 +34,7 @@ export default function Footer() {
       </div>
 
       <div className="mt-16 border-t border-gray-300 pt-6 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} Joud Olive Oil. All rights reserved.
+        © {new Date().getFullYear()} Joud Olive Oil. All rights reserved. | <Link href="https://majd.app" className="hover:text-gray-900 transition" target="_blank" rel="noopener noreferrer">Built by Majd</Link>
       </div>
     </footer>
   );
