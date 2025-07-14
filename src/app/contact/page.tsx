@@ -14,7 +14,7 @@ export default function ContactPage() {
       <motion.section
         className="relative h-[50vh] flex items-center justify-center text-white"
         style={{
-          backgroundImage: 'url("/background1.jpg")',
+          backgroundImage: 'url("/hero-background1.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -37,21 +37,24 @@ export default function ContactPage() {
         </p>
 
         <div className="bg-white p-6 border border-gray-200 rounded-lg shadow-sm">
-          <form className="grid grid-cols-1 gap-6">
+          <form className="grid grid-cols-1 gap-6" action="https://formspree.io/f/movlawzz" method="POST">
             <input
               type="text"
               placeholder="Your Name"
               className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#b3a16c]"
+              name="name"
             />
             <input
               type="email"
               placeholder="Your Email"
               className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#b3a16c]"
+              name="email"
             />
             <textarea
               rows={5}
               placeholder="Your Message"
               className="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#b3a16c]"
+              name="message"
             ></textarea>
             <button
               type="submit"

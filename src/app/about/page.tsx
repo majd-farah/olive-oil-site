@@ -15,7 +15,7 @@ export default function AboutPage() {
       <motion.section
         className="relative h-[60vh] flex items-center justify-center text-white"
         style={{
-          backgroundImage: 'url("/background1.jpg")',
+          backgroundImage: 'url("/hero-background1.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

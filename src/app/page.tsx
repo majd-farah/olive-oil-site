@@ -30,7 +30,7 @@ export default function HomePage() {
         <motion.section
           className="relative h-[85vh] flex items-center justify-center text-white font-serif"
           style={{
-            backgroundImage: 'url("/background1.jpg")',
+            backgroundImage: 'url("/hero-background1.jpg")',
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -57,6 +57,7 @@ export default function HomePage() {
             </a>
           </div>
         </motion.section>
+
 
         {/* Featured Products */}
         <motion.section className="pt-24 px-4 bg-white" {...fadeInUp}>
