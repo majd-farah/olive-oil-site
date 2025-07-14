@@ -64,13 +64,6 @@ export default function ContactPage() {
             </button>
           </form>
         </div>
-
-        <div className="mt-10 text-sm text-gray-600">
-          Or email us directly at:{" "}
-          <a href="mailto:support@joudoliveoil.com" className="text-[#b3a16c] underline">
-            support@joudoliveoil.com
-          </a>
-        </div>
       </motion.section>
     </main>
   );
