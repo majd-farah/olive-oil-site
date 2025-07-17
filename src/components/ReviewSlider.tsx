@@ -13,7 +13,7 @@ interface ReviewSliderProps {
 
 export default function ReviewSlider({ reviews }: ReviewSliderProps) {
   return (
-    <section className="bg-[#2e463f] text-white py-24 font-serif">
+    <section className="bg-[#62633a] text-white py-24 font-serif">
       <div className="max-w-3xl mx-auto text-center relative px-4">
         <div className="w-10/12 mx-auto lg:w-full relative">
           {/* Custom Prev Button */}

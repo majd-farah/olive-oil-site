@@ -99,16 +99,8 @@ export default function HomePage() {
       {/* Educational Section */}
       <motion.section className="bg-white py-24 px-0" {...fadeInUp}>
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 grid-rows-2 gap-0 items-stretch font-serif text-gray-900">
-          {/* Image Top Left */}
-          <div className="min-h-[320px] h-full w-full">
-            <img
-              src="/olives.jpg"
-              alt="Olives in a pile"
-              className="h-full w-full object-cover"
-            />
-          </div>
-          {/* Text Top Right */}
-          <div className="flex flex-col justify-center items-start h-full w-full bg-white p-12">
+          {/* Text Top Left */}
+          <div className="flex flex-col justify-center items-start h-full w-full bg-white p-12 order-1">
             <h2 className="text-4xl font-semibold mb-4">
               Learn About Olive Oil
             </h2>
@@ -125,8 +117,24 @@ export default function HomePage() {
               Learn More
             </a>
           </div>
-          {/* Text Bottom Left */}
-          <div className="flex flex-col justify-center items-start h-full w-full bg-white p-12 order-2 md:order-3">
+          {/* Image Top Right */}
+          <div className="min-h-[320px] h-full w-full order-2">
+            <img
+              src="/olives.jpg"
+              alt="Olives in a pile"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          {/* Image Bottom Left */}
+          <div className="min-h-[320px] h-full w-full order-3">
+            <img
+              src="/pickles.jpg"
+              alt="Assortment of pickles"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          {/* Text Bottom Right */}
+          <div className="flex flex-col justify-center items-start h-full w-full bg-white p-12 order-4">
             <h2 className="text-4xl font-semibold mb-4">
               The Art of Arab Pickles
             </h2>
@@ -139,14 +147,6 @@ export default function HomePage() {
             >
               Learn More
             </a>
-          </div>
-          {/* Image Bottom Right */}
-          <div className="min-h-[320px] h-full w-full order-3 md:order-4">
-            <img
-              src="/pickles.jpg"
-              alt="Assortment of pickles"
-              className="h-full w-full object-cover"
-            />
           </div>
         </div>
       </motion.section>
