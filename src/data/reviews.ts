@@ -6,9 +6,9 @@ export interface Review {
   
   export const reviews: Review[] = [
     {
-      quote: "I am so glad to know a good source -",
-      body: "for a variety of olive oils. I trust this company to offer quality products and deliver with good shipping practices.",
-      author: "Lenore M.",
+      quote: "Some of the Best",
+      body: "I highly recommend this extra virgin Lebanese olive oil to anyone who appreciates the finest quality ingredients. It is truly a standout product and one that I will continue to use and enjoy.",
+      author: "Nour S.",
     },
     {
       quote: "Authentic and flavorful!",
